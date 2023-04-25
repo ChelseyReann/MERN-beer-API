@@ -25,9 +25,9 @@ function Brewery() {
 
   return (
     <div>
-      <h1>Breweries</h1>
-      {brewery  && (
+      {brewery.length > 0  && (
         <div className="brewery-container">
+            <button onClick={prevBrewery}>Prev</button>
           <div className="brewery-display">
                 <p>{brewery[currentIndex].name}</p>
                 <p>{brewery[currentIndex].phone}</p>
@@ -35,10 +35,7 @@ function Brewery() {
                 <p>{brewery[currentIndex].state_province}</p>
                 <p>{brewery[currentIndex].country}</p>
               </div>
-          <div className="brewery-controls">
-            <button onClick={prevBrewery}>Prev</button>
             <button onClick={nextBrewery}>Next</button>
-          </div>
         </div>
       )}
     </div>

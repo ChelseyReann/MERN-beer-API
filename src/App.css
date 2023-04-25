@@ -1,29 +1,8 @@
 .brewery-container {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns:repeat(5, fr);
-  grid-template-rows: repeat(10, fr);
-  grid-area: 
-  "brewery-item-0 brewery-item-1 brewery-item-2 brewery-item-3 brewery-item-4
-    brewery-item-5 brewery-item-6 brewery-item-7";
+  display: flex;
+  flex-direction: row;
 }
 
-.brewery-display {
-  grid-area: auto;
+button {
+  height: 2rem;
 }
-
-/* .brewery-display:nth-child(1) {
-  grid-area: brewery-item-1;
-}
-
-.brewery-display:nth-child(2) {
-  grid-area: brewery-item-2;
-}
-
-.brewery-display:nth-child(3) {
-  grid-area: brewery-item-3;
-}
-
-.brewery-display:nth-child(4) {
-  grid-area: brewery-item-4;
-} */
