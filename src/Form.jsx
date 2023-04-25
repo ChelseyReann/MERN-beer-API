@@ -35,7 +35,13 @@ function Form (){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setForm()
+        const newItem = {
+            name: name,
+            phone: phone,
+            url: url,
+            state: state,
+            country: country
+        }
     } 
 
     return (

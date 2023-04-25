@@ -7,9 +7,8 @@ function Brewery() {
 
 const fetchBreweryData = async () => {
     try {
-      const res = await fetch("https://api-project-production-4bae.up.railway.app/beer");
-      const data = await res.json();
-      setBrewery(data);
+      const res = await axios.get("https://api-project-production-4bae.up.railway.app/beer");
+      setBrewery(res.data);
     } catch (error) {
       console.error("Failed to fetch brewery data:", error);
     }
@@ -20,11 +19,21 @@ const fetchBreweryData = async () => {
   }, []);
 
   const prevBrewery = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1));
+    if(currentIndex === 0 ){
+        setCurrentIndex(brewery.length -1)
+    } else {
+        setCurrentIndex((prevIndex) => (prevIndex - 1));
+    } 
+   
   };
 
   const nextBrewery = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1));
+    if(currentIndex === brewery.length -1){
+        setCurrentIndex(0)
+    } else {
+        setCurrentIndex((prevIndex) => (prevIndex + 1));
+    }
+   
   };
 
   return (
