@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function Brewery() {
   const [brewery, setBrewery] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+const fetchBreweryData = async () => {
+    try {
+      const res = await fetch("https://api-project-production-4bae.up.railway.app/beer");
+      const data = await res.json();
+      setBrewery(data);
+    } catch (error) {
+      console.error("Failed to fetch brewery data:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch("https://api-project-production-4bae.up.railway.app/beer")
-      .then((res) => res.json())
-      .then((data) => {
-        setBrewery(data);
-      })
-      .catch((error) => {
-        console.error("Failed to fetch brewery data:", error);
-      });
+    fetchBreweryData();
   }, []);
 
   const prevBrewery = () => {

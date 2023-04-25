@@ -15,18 +15,22 @@ function Form (){
 
     const handlePhone = (e) => {
         setPhone(e.target.value)
+        console.log(e.target.value)
     }
 
     const handleUrl = (e) => {
         setUrl(e.target.value)
+        console.log(e.target.value)
     }
 
     const handleState = (e) => {
         setState(e.target.value)
+        console.log(e.target.value)
     }
 
     const handleCountry = (e) => {
         setCountry(e.target.value)
+        console.log(e.target.value)
     }
 
     const handleSubmit = (e) => {
