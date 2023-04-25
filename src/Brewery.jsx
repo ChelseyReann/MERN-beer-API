@@ -21,7 +21,8 @@ function Brewery() {
         {brewery && (
           <div className="brewery-grid">
             {brewery.map((brewery, index) => (
-              <div key={index} className="brewery-display">
+              <div key={index} className="brewery-display-"
+              style={{ gridArea: `brewery-item-${index}`}}>
                 <p>{brewery.name}</p>
                 <p>{brewery.phone}</p>
                 <p>{brewery.website_url}</p>

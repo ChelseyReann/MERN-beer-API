@@ -2,6 +2,10 @@
   display: grid;
   gap: 1rem;
   grid-template-columns:repeat(5, fr);
+  grid-template-rows: repeat(10, fr);
+  grid-area: 
+  "brewery-item-0 brewery-item-1 brewery-item-2 brewery-item-3 brewery-item-4
+    brewery-item-5 brewery-item-6 brewery-item-7";
 }
 
 .brewery-display {
