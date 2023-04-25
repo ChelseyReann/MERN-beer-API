@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+.brewery-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns:repeat(5, fr);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brewery-display {
+  grid-area: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .brewery-display:nth-child(1) {
+  grid-area: brewery-item-1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.brewery-display:nth-child(2) {
+  grid-area: brewery-item-2;
 }
 
-.App-link {
-  color: #61dafb;
+.brewery-display:nth-child(3) {
+  grid-area: brewery-item-3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.brewery-display:nth-child(4) {
+  grid-area: brewery-item-4;
+} */
