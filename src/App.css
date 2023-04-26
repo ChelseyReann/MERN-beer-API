@@ -28,6 +28,12 @@ h1 {
 button {
   height: 2rem;
   margin-top: 2rem;
+  padding: 0 auto;
+  border: 2px inset #5f5f5f;
+}
+
+button:hover{
+  border: 2px outset #5f5f5f;
 }
 
 :root {
