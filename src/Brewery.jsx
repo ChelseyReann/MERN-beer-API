@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
+//import { useNavigate } from 'react-router-dom'
+
 
 function Brewery() {
   const [brewery, setBrewery] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const phoneRef = useRef()
+  //const nav = useNavigate()
 
 const fetchBreweryData = async () => {
     try {
@@ -36,6 +40,23 @@ const fetchBreweryData = async () => {
    
   };
 
+  const handleEdit = async (e) => {
+    e.preventDefault()
+    const data = {
+        phone: phoneRef.current.value
+    }
+    await axios.put(`https://api-project-production-4bae.up.railway.app/beer/${brewery[currentIndex]._id}`, data)
+    phoneRef.current.value = ""
+    fetchBreweryData()
+  }
+
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    await axios.delete(`https://api-project-production-4bae.up.railway.app/beer/${brewery[currentIndex]._id}`)
+    //nav("/")
+    
+  }
+
   return (
     <div>
       {brewery.length > 0  && (
@@ -51,6 +72,17 @@ const fetchBreweryData = async () => {
             <button onClick={nextBrewery}>Next</button>
         </div>
       )}
+      <div className="ud-form">
+        <p>Update the Brewery's phone # below!</p>
+        <form onSubmit={handleEdit}>
+            <input type="text" placeholder="New Phone #" ref={phoneRef}></input>
+            <input type="submit"></input>
+        </form>
+        <p>Delete the brewery with the below button</p>
+        <form onSubmit={handleDelete}>
+            <input type="submit"></input>
+        </form>
+      </div>
     </div>
   );
 }

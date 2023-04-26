@@ -5,7 +5,23 @@ import Form from './Form'
 function App() {
   return (
     <div>
-      <h1>Find a Brewery near you!</h1>
+      <div class="wrap">
+        <span class="hop-husk">
+        <span class="hop-seed"></span>
+      </span>
+      <span class="hops">
+        hops
+      </span>
+      <span class="and">
+      &
+      </span>
+      <span class="grain">
+      grain
+    </span>
+    <span class="tagline">
+    find a brewery near you
+    </span>
+  </div>
       <Brewery />
       <Form />
     </div>

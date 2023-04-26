@@ -1,9 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 .brewery-container {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.brewery-display {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem
+}
+
+.ud-form {
+  text-align: center;
+}
+
+.create-form {
+  text-align: center
+}
+
+h1 {
+  text-align: center
 }
 
 button {
   height: 2rem;
   margin-top: 2rem;
+}
+
+:root {
+  --primary-font: 'Fjalla One', Monda;
+  --font-color: #fff;
+  --hop-color: #ffa300;
+  --background-color: #5e5e5e; 
+}
+
+html {
+  /* change font-size value 
+   * to change the logo size */
+  font-size: 20px;
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  background: var(--background-color);
+}
+
+.wrap {
+  height: 12em; 
+  width: 15.5em; 
+  position: relative;
+  margin: .5em auto;
+  background: var(--background-color);
+}
+
+.wrap:before {
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: .65em;
+  top: .65em;
+}
+
+span {
+  font-size: 5.75em;
+  letter-spacing: -.04em
+}
+
+.hops {
+  display: block;
+}
+
+.and,
+.grain {
+  position: absolute;
+  top: 36%;
+}
+
+.and {
+  font-size: 5.3em;
+  left: 0;
+  top: 32%;
+  display: inline-block;
+}
+
+.grain {
+  left: 25.3%;
+}
+
+.tagline {
+  display: block;
+  font-size: .86em;
+  letter-spacing: 0;
+  bottom: 3%;
+  right: 2.8%;
+  position: absolute;
+}
+
+.hop-husk {
+  width: .3em;
+  height: .72em;
+  background: var(--hop-color);
+  position: absolute;
+  right: 17.3%;
+  top: 17%;
+  border-radius: 0 0 2em 2em;
+  box-shadow: 0 0 0 .035em var(--background-color);
+  z-index: 1;
+}
+
+.hop-husk:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: .05em .115em 0 .115em;
+  left: .04em;
+  border-color: var(--background-color) transparent transparent transparent;
+  position: absolute;
+  top: 27%
+}
+
+.hop-husk:after {
+  content: '';
+  width: .225em;
+  height: .195em;
+  left: .04em;
+  background: var(--background-color);
+  position: absolute;
+}
+
+.hop-seed {
+  width: .007em;
+  height: .06em;
+  background: var(--hop-color);
+  position: absolute;
+  z-index: 2;
+  left: .0217em;
+}
+
+.hop-seed:before,
+.hop-seed:after {
+  content: '';
+  height: .01em;
+  width: .015em;
+  background: var(--background-color);
+  position: absolute;
+  top: .045em;
+  box-shadow: 
+    0 .0135em 0 var(--background-color), 
+    0 .027em 0 var(--background-color),
+    0 .0395em 0 var(--background-color),
+    0 .053em 0 var(--background-color);
+}
+
+.hop-seed:before {
+  left: -.015em;
+  border-radius: 0 100%;
+}
+
+.hop-seed:after {
+  right: -.015em;
 }

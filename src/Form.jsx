@@ -18,42 +18,38 @@ function Form (){
             state_province: stateRef.current.value,
             country: countryRef.current.value,
         }
-        await axios.post("https://api-project-production-4bae.up.railway.app/beer/${brewery[currentIndex]_id}", data)
+        await axios.post("https://api-project-production-4bae.up.railway.app/beer", data)
         setMessage("Thank you!")
         nameRef.current.value = ""
         phoneRef.current.value = ""
         urlRef.current.value = ""
         stateRef.current.value = ""
         countryRef.current.value = ""
+        //another fetch to api
     } 
 
     return (
-        <div>
+        <div className='create-form'>
             <h3>Know of a brewery that should be added to this list?</h3>
-            <h4>Fill out the form below to get it included!</h4>
+            <p>Fill out the form below to get it included!</p>
                 <form onSubmit={handleSubmit}>
-                    <input 
-                        type='text' 
+                    <input  
                         placeholder='Brewery Name' 
                         ref={nameRef}>
                     </input><br />
                     <input 
-                        type='text' 
-                        placeholder='Brewery Phone Number' 
+                        placeholder='Phone Number' 
                         ref={phoneRef}>
                     </input><br />
-                    <input 
-                        type='text' 
-                        placeholder='Brewery Website' 
+                    <input  
+                        placeholder='Website' 
                         ref={urlRef}>
                     </input><br />
-                    <input 
-                        type='text' 
+                    <input  
                         placeholder='State' 
                         ref={stateRef}>
                     </input><br />
                     <input 
-                        type='text' 
                         placeholder='Country' 
                         ref={countryRef}>
                     </input><br />
