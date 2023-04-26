@@ -1,4 +1,4 @@
-# Full Stack Brewery Application
+# Full Stack Brewery Application 🍻
 
 ## Introduction
 Using an API that one of my fellow classmates created, I created a Front-End application! It's all about breweries in different states and you can view their website, location, and phone number. 
