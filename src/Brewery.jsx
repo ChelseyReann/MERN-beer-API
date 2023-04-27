@@ -76,7 +76,6 @@ const fetchBreweryData = async () => {
                 <p>{brewery[currentIndex].name}</p>
                 <p>{brewery[currentIndex].phone}</p>
                 <a href={brewery[currentIndex].website_url} target={"_blank"} rel="noreferrer">{brewery[currentIndex].website_url}</a>
-                {/* <p>{brewery[currentIndex].website_url}</p> */}
                 <p>{brewery[currentIndex].state_province}</p>
                 <p>{brewery[currentIndex].country}</p>
               </div>
