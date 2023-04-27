@@ -23,7 +23,7 @@ npm run start
 4. Happy coding!
 
 ## How to View My Deployed Site
-the app is deployed on Netlify and you check it out by clicking this [link](https://mern-brewery-api.netlify.app/)
+The app is deployed on Netlify and you check it out by clicking this [link](https://mern-brewery-api.netlify.app/)
 
 
 ## Resources
