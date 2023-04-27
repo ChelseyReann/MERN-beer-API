@@ -53,7 +53,7 @@ function Form (){
                         placeholder='Country' 
                         ref={countryRef}>
                     </input><br />
-                    <input type='submit'></input>
+                    <input type='submit' className="mysubmitbutton"></input>
                 </form>
                 <p>{message}</p>
         </div>

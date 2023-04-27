@@ -64,8 +64,7 @@ const fetchBreweryData = async () => {
   const handleDelete = async (e) => {
     e.preventDefault()
     await axios.delete(`https://api-project-production-4bae.up.railway.app/beer/${brewery[currentIndex]._id}`)
-    //nav("/")
-    
+    //nav("/") 
   }
 
   return (
@@ -86,7 +85,7 @@ const fetchBreweryData = async () => {
       <div className="ud-form">
       <div className="u-form">
         <p>Notice some out of date info?< br/>
-        Update the brewery info below!</p>
+        Update the brewery info below.</p>
         <form onSubmit={handleEdit}>
              <input  
                 placeholder='Brewery Name' 
@@ -113,7 +112,7 @@ const fetchBreweryData = async () => {
         </div>
         <div className="d-form">
         <p className="d">Is this brewery shut down? < br/>
-            Delete it with the button below!</p>
+            Delete it with the button below.</p>
         <form onSubmit={handleDelete}>
             <input type="submit" className="mysubmitbutton" value={"Delete"}></input>
         </form>
