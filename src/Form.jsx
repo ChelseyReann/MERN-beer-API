@@ -30,8 +30,8 @@ function Form (){
 
     return (
         <div className='create-form'>
-            <h3>Know of a brewery that should be added to this list?</h3>
-            <p>Fill out the form below to get it included!</p>
+            <h2 className='h2-create'>Know of a brewery that should be added to this list?</h2>
+            <p className='p-create'>Fill out the form below to get it included!</p>
                 <form onSubmit={handleSubmit}>
                     <input  
                         placeholder='Brewery Name' 

@@ -4,27 +4,32 @@ import Form from './Form'
 
 function App() {
   return (
-    <div>
-      <div class="wrap">
-        <span class="hop-husk">
-        <span class="hop-seed"></span>
+    <div className='container'>
+      <div className='nav'>
+        <div className="wrap">
+          <span className="hop-husk">
+          <span className="hop-seed"></span>
+        </span>
+        <span className="hops">
+         hops
+        </span>
+        <span className="and">
+        &
+        </span>
+        <span className="grain">
+        grain
       </span>
-      <span class="hops">
-        hops
+      <span className="tagline">
+      find a brewery near you
       </span>
-      <span class="and">
-      &
-      </span>
-      <span class="grain">
-      grain
-    </span>
-    <span class="tagline">
-    find a brewery near you
-    </span>
+    </div>
   </div>
+  <div className='bottom-container'>
+  <h2>Browse through the breweries below:</h2>
       <Brewery />
       <Form />
-    </div>
+  </div>
+  </div>
   );
 }
 
