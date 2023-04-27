@@ -64,7 +64,7 @@ const fetchBreweryData = async () => {
   const handleDelete = async (e) => {
     e.preventDefault()
     await axios.delete(`https://api-project-production-4bae.up.railway.app/beer/${brewery[currentIndex]._id}`)
-    //nav("/") 
+    //nav("/")
   }
 
   return (
@@ -75,7 +75,8 @@ const fetchBreweryData = async () => {
           <div className="brewery-display">
                 <p>{brewery[currentIndex].name}</p>
                 <p>{brewery[currentIndex].phone}</p>
-                <p>{brewery[currentIndex].website_url}</p>
+                <a href={brewery[currentIndex].website_url} target={"_blank"} rel="noreferrer">{brewery[currentIndex].website_url}</a>
+                {/* <p>{brewery[currentIndex].website_url}</p> */}
                 <p>{brewery[currentIndex].state_province}</p>
                 <p>{brewery[currentIndex].country}</p>
               </div>
