@@ -1,9 +1,14 @@
 # Full Stack Brewery Application 🍻
 
 ## Introduction
-Using an API that one of my fellow classmates created, I created a Front-End application! It's all about breweries in different states and you can view their website, location, and phone number. 
+Using an API that one of my fellow classmates created, I created a Front-End application! It's all about breweries in different states and you can view their name, website, location, and phone number. 
 
-I implemented a slider functionality so you can scroll through each brewery. This is also a full CRUD application! User's can create their own entry for a brewery that isn't on the list! Also, user's can update the brewery's phone number if it isn't correct and users can also delete a brewery entry from the list!
+I implemented a slider functionality so you can scroll through each brewery. This is also a full CRUD application! 
+
+Which means that:
+- User's can create their own entry for a brewery that isn't on the list 
+- User's can update the brewery's information if it isn't correct 
+- Users can also delete a brewery entry from the list!
 
 ## Installation
 1. Fork and clone this repository.
